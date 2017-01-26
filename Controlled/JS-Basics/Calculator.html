@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body style="padding: 50px 50px 50px 50px">
+        
+        <script>
+            function calculate(op){
+                
+                var num1 = parseInt(document.getElementById("num1").value);
+                var num2 = parseInt(document.getElementById("num2").value);
+                var result;
+
+                switch(op){
+                    case '+':
+                        document.getElementById("op").innerText = "+";
+                        result = num1+num2;
+                        break;
+                    case '-':
+                        document.getElementById("op").innerText = "-";                    
+                        result = num1-num2;                        
+                        break;
+                    case '*':
+                        document.getElementById("op").innerText = "*";                    
+                        result = num1*num2;                        
+                        break;
+                    case '/':
+                        document.getElementById("op").innerText = "/";                    
+                        result = num1/num2;                        
+                        break;  
+                   default:
+                        console.log("Invalid operator");
+                }
+
+                document.getElementById("result").innerText = result;
+                
+            }
+        </script>
+
+        <input type="text" id="num1">
+        <span id="op"></span>
+        <input type="text" id="num2">
+        =
+        <strong id="result"></strong>
+
+        <br/>
+        <br/>
+        
+        <button style="width:75px" onClick="calculate('+')">+</button>
+        <button style="width:75px" onClick="calculate('-')">-</button>
+        <button style="width:75px" onClick="calculate('*')">*</button>
+        <button style="width:75px" onClick="calculate('/')">/</button>
+        
+
+    </body>
+</html>

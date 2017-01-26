@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body style="padding: 50px 50px 50px 50px">
+
+        <script>
+            var myFunction = function(){
+                console.log("function1");
+            };
+
+            var functionCaller = function(func){
+                console.log("function2 begin")
+                if(typeof func === "function"){
+                    func();
+                }
+                console.log("function2 end");
+            };
+
+            functionCaller(myFunction);
+
+            console.log("one");
+            setTimeout(function(){
+                console.log("two");
+            }, 1000);
+            console.log("three");
+            
+        </script>
+
+        <script>
+
+            function decide(){
+                IPromiseYou(Number(document.getElementById("num1").value)).then(function(){
+                    console.log("resolved");
+
+                }, function(){
+                    console.log("rejected");
+                });
+            }
+
+            function IPromiseYou(num){
+                return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                        if(num > 10){
+                            resolve();
+                        }else{
+                            reject();
+                        }
+                    },5000);
+
+                });
+            }
+
+        </script>
+
+
+        <input type="text" id="num1" />
+        <button onClick="decide()">Decide</button>
+
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>  
+    <head>
+        <title>JavaScript basics</title>
+    </head>
+
+    <body style="padding: 50px 50px 50px 50px">
+
+        <div>
+            <h2> 10 == "10" ? <span id="one"></span></h2> 
+            <h2> 10 === "10" ? <span id="two"></span></h2>
+            <h2> 10 != "10" ? <span id="three"></span> </h2>        
+            <h2> 10 !== "10" ? <span id="four"></span> </h2>           
+                       
+        </div>
+        
+        <script>
+            document.getElementById("one").innerText = (10 == "10");
+            document.getElementById("two").innerText = (10 === "10");            
+
+             document.getElementById("three").innerText = (10 != "10");
+            document.getElementById("four").innerText = (10 !== "10");     
+        </script>
+        
+    </body>
+</html>
