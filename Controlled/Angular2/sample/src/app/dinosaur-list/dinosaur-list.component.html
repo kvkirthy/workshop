@@ -1,0 +1,17 @@
+<table class="table table-hover">
+  <thead class="active">
+    <tr>
+      <th>Dinosaur Name</th>
+      <th>Appeared</th>
+      <th>Vanished</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dinosaur of dinosaurs" (click)="nagigateToDetails(dinosaur.name)">
+      <td>{{dinosaur.name}}</td>
+      <td>{{dinosaur.appeared}}</td>
+      <td>{{dinosaur.vanished}}</td>
+
+    </tr>
+  </tbody>
+</table>
