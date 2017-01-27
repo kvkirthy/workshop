@@ -269,161 +269,75 @@ Flow a static type checker for JavaScript. A Facebook open source project. It wo
         </div>
 <!--
            -->
-        <div id="flowsyntax1" class="step slide" data-x="4000" data-y="2450" data-rotate="-90">
-            <strong>Flow Syntax</strong>
+        <div id="angular1" class="step slide" data-x="4000" data-y="2450" data-rotate="-90">
+            <strong>Angular 1x</strong>
             <hr/>
-        <pre class="small-font">
-<code-text>let variableName: dataType</code-text>
-<strong>Eg: </strong> <code-text>let num1: number</code-text>
-<code-text>
-function isLongString(param1: string): boolean{
-    if(param1.length > 10){
-        return true;
-    }else{
-        return false;
-    }
-}
-</code-text>
-<strong>ES 2015 Way:</strong>
-<code-text>
-const isLongString = 
-(param: string): boolean => (param.length > 10)? true:false
-</code-text>
-        </pre>
+            <ul>
+              <li>Data Binding</li>
+              <li>&nbsp;</li>
+              <li>Controller</li>
+              <li>&nbsp;</li>              
+              <li>Iterate a list (ng-repeat)</li>
+              <li>&nbsp;</li>              
+              <li>Service/Factory</li>
+              <li>&nbsp;</li>              
+              <li>HTTP API</li>
+              <li>&nbsp;</li>              
+              <li>Single Page Application</li>
+            </ul>
         </div>
 
         
-        <div id="flowsyntax2" class="step slide" data-x="5000" data-y="2450" data-rotate="-90">
-            <strong>Type Alias</strong>
+        <div id="ES6AndTypeScript" class="step slide" data-x="5000" data-y="2450" data-rotate="-90">
+            <strong>ES6/ES2015 & Typescript</strong>
             <hr/>
-        <pre>
-
-
-
-            <code-text>
-        type dinosaur = { 
-            order: string; 
-            appeared: number; 
-            height: number; 
-            length: number; 
-        }
-            </code-text>
-
-        </pre>
+              <ul>
+                <li>Arrow function </li>
+                <li>&nbsp;</li>
+                <li>var/let/const</li>
+                <li>&nbsp;</li>              
+                <li>String extrapolation</li>
+                <li>&nbsp;</li>              
+                <li>Spread Operator</li>
+                <li>&nbsp;</li>              
+                <li>Calculator with classes</li>
+                <li>&nbsp;</li>              
+                <li>Modules</li>
+            </ul>          
         </div>        
-        <div id="primitiveTypes" class="step slide" data-x="4000" data-y="3600" data-rotate="-90">
-            <strong>Flow - Primitive Types</strong>
+        <div id="ProblemsWithMVC" class="step slide" data-x="4000" data-y="3600" data-rotate="-90">
+            <strong>MVC and Pitfalls</strong>
             <hr/>
             <p style="width:100%; text-align:center"  >
                 <br/>
                 <ul class="small-font">
-                    <li>number</li>
+                    <li>Model could be updated many ways</li>
                     <li>&nbsp; </li>
 
-                    <li>string</li>
-                    <li>&nbsp; </li>
-
-                    <li>boolean</li>
-                    <li>&nbsp; </li>
-
-                    <li>null</li>
-                    <li>&nbsp; </li>
-
-                    <li>void</li>
-                    <li>&nbsp; </li>                    
+                    <li>Component approach is better</li>
+                    <li>&nbsp; </li>           
                 </ul>
             </p>
         </div>
 
-        <div id="moreTypes" class="step slide" data-x="5000" data-y="3600" data-rotate="-90">
-            <strong>any</strong>
+        <div id="angular2" class="step slide" data-x="5000" data-y="3600" data-rotate="-90">
+            <strong>Angular 2</strong>
             <hr/>                   
-        <pre>
-            <div style="font-size:14pt; font-family: consolas">
-                // any is a super type and subtype of all types
-                let genericVariable: any = 20;
-                let numericVariable: number;
-
-                genericVariable = numericVariable; // No error
-                numericVariable = genericVariable; // No error
-            </div>
-        </pre>
-        </div>
-
-        <div id="moreTypes2" class="step slide" data-x="4000" data-y="1300" data-rotate="-90">
-            <strong>mixed</strong>
-            <hr/>                   
-        <pre>
-            <div style="font-size:14pt; font-family: consolas">
-                // mixed is a super type of all types
-                
-                let genericVariable: mixed = 20;
-                let numericVariable: number;
-
-                genericVariable = numericVariable; // No error
-
-                // Error, special type can\'t be substituted by generic type
-                numericVariable = genericVariable; 
-            </div>
-        </pre>
-        </div>        
-
-        <div id="moreTypes3" class="step slide" data-x="5000" data-y="1300" data-rotate="-90">
-             <strong>union</strong>
-             <hr/>
-        <pre>
-            <div style="font-size:14pt; font-family: consolas">
-            type weekdays = 
-                    "Monday" |
-                    "Tuesday"|
-                    "Wednesday"|
-                    "Thursday"|
-                    "Friday"
-                    ;
-
-                    let aDay: weekdays;
-                    aDay = "Saturday"; // Error
-            </div>
-        </pre>
-        </div>
-
-        <div id="2gsbf" class="step slide" data-x="-2000" data-y="-1500">
-            <strong>Getting started with Flow - Basic Sample</strong>
-            <hr/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <p class="small-font">
-                <code-text>
-                    1. npm install --save-dev flow-bin <br/> 
-                    2. flow init <br/>
-                    <normal>(Initializes with a flow configuration file.)</normal> <br/> 
-                    3. npm install -g flow-remove-types <br/>
-                    4. flow-remove-types sourfile.js --out-file targetfile.js
-                </code-text>
-
-            </p>
-        </div>
-
-        <div id="three" class="step slide" data-x="-1000" data-y="-1500">
-            <strong>Getting started with Flow for ReactJS</strong>
-            <hr/>
-            <pre>
-                <div style="font-size:14pt; font-family: consolas">
-1. npm install --save-dev flow-bin 
-2. npm install babel-preset-react --save-dev 
-(This might have already been installed. It implicitly supports flow.) 
-    a. It installs babel plugin for stripping Flowtypes 
-    b. If you need to install it manually use 
-        npm install babel-plugin-transform-flow-strip-types --save-dev 
-    c. And add plugin to .babelrc 
-        "plugins": ["transform-flow-strip-types"], 
-3. flow init 
-(Createsn a configuration file for Flow) 
-4. Add script to package.json "flow": "flow check || exit 0"
-                </div>
-            </pre>
+            <ul style="padding: 50px 50px 50px 50px">
+                <li>Data bindings</li>
+                <li>&nbsp; </li>
+                <li>Components</li>
+                <li>&nbsp; </li>
+                <li>List(*ngFor)</li>
+                <li>&nbsp; </li>
+                <li>Providers</li>
+                <li>&nbsp; </li>
+                <li>Http</li>
+                <li>&nbsp; </li>
+                <li>RxJS</li>
+                <li>&nbsp; </li>
+                <li>Routing</li>                
+            </ul>
         </div>
 
         <div id="qa" class="step slide" data-x="0" data-y="-1500">
@@ -431,10 +345,11 @@ const isLongString =
         <hr/>
         <table>
             <tr>
-                <td>
-                    <h2>Thank you</h2>
-                    <span>Twitter @keertikotaru | Blogs at <a href="http://bit.ly/kotaru" target="__blank">bit.ly/kotaru </a>
-                    </span>
+                <td style="min-width:500px">
+                    <h1>Thank you</h1>
+                    <div>Twitter @keertikotaru </div>
+                    <div> Blogs at <a href="http://bit.ly/kotaru" target="__blank">bit.ly/kotaru </a>
+                    </div>
                 </td>
                 <td>
                     <img src="./images/ProfilePic.jpg" style="max-height: 250px" alt="">
