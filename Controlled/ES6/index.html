@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <title>ES6 Sample</title>
+</head>
+
+<body style="padding: 50px 50px 50px 50px ">
+<input type="text" id="num1" />
+<span id="op"></span>
+<input type="text" id="num2" />
+=
+<strong id="result"></strong>
+
+<br /> 
+<br /> 
+
+<button style="width:50px" onClick="calculate('+')">+</button>
+<button style="width:50px" onClick="calculate('-')">-</button>
+<button style="width:50px" onClick="calculate('*')">*</button>
+<button style="width:50px" onClick="calculate('/')">/</button>
+
+
+<script>
+            var elmNum1 = document.getElementById("num1");
+            var elmNum2 = document.getElementById("num2");
+            var result = document.getElementById("result");
+
+            const calculate = (op) => {
+                switch(op){
+                    case '+':
+                        result.innerText = Number(elmNum1.value) + Number(elmNum2.value);
+                        break;
+                    case '-':
+                        result.innerText = Number(elmNum1.value) - Number(elmNum2.value);
+                        break;
+                    case '*' :
+                        result.innerText = Number(elmNum1.value) * Number(elmNum2.value);
+                        break;
+                    case '/':
+                        result.innerText = Number(elmNum1.value) / Number(elmNum2.value);
+                        break;
+                    default:
+                        console.log("invalid operator");                                                
+                }
+            }
+
+// LET AND CONST 
+            function sample(param){
+                
+                if(param > 50){
+                    var x=10;
+                    let y=20;
+
+                    console.log(x);
+                    console.log(y);
+                }
+
+                console.log(x);
+                //console.log(y);
+            }
+            sample(55);
+
+// SPREAD OPERATOR
+
+            ((a, ...b) => {
+                console.log(`Value of ${a}`);
+                console.log(`value of the second parameter ${b}`);
+            })(10,20,30);
+
+             ((a, b, c) => {
+                console.log(`Value of the first parameter ${a}`);
+                console.log(`value of the second parameter ${b}`);
+                console.log(`value of the third parameter ${c}`);
+                
+            })(...[10,20,30]);
+
+        </script>
+</body>
+
+</html>
