@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>TypeScript sample</title>
+    </head>
+
+    <body padding="10px 10px 10px 10px">
+
+        <script>
+            function sum(){
+
+                var num1 = Number(document.getElementById("num1").value);
+                var num2 = Number(document.getElementById("num2").value);
+
+                document.getElementById('result').innerText = num1 + num2;
+
+            }
+        </script>
+
+        <input type="text" id="num1" />
+        <span id="op"></span>
+        <input type="text" id="num2" />
+        =
+        <strong id="result"></strong>
+        
+        <br/>
+        <br/>
+
+        <button style="width: 100px" onclick="sum()"> + </button>
+
+
+    </body>
+</html>

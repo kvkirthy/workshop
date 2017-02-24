@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default">
+  <div class="navbar-header">
+    <div class="navbar-brand">
+      {{title}}
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div>What's in your mind?</div>
+  <input type="text" [(ngModel)]="status" /> <button (click)="updateStatus()">Update Status</button>
+
+  <ul >
+    <li *ngFor="let item of statusList"> 
+      <strong>{{item.message}}</strong>
+      <div>{{item.by}}</div>
+    </li>
+  </ul>
+</div>

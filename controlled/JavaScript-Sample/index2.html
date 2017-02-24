@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <script>
+            function calculate(num1, num2, handler){
+                console.log(handler(num1, num2));
+            }
+
+            function sum(n1, n2){
+                return n1 + n2;
+            }
+
+            calculate(10,20, sum);
+
+            calculate(10,20, function(n1, n2){
+                return n1 * n2;
+            });
+            
+        </script>
+
+    </body>
+</html>
