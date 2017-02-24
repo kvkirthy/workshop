@@ -1,0 +1,29 @@
+{
+  "status": [
+    {
+      "id": 1,
+      "message": "I've got more than a thousand runs in 2016",
+      "by": "Virat Kohli"
+    },
+    {
+      "id": 2,
+      "message": "What do you think is the best movie of the year 2016?",
+      "by": "Aamir Khan"
+    },
+    {
+      "id": 3,
+      "message": "In 2016, we released Angular 2.",
+      "by": "Angular 2 Team"
+    },
+    {
+      "id": 4,
+      "message": "Welcome to 2017",
+      "by": "Anonymous"
+    },
+    {
+      "id": "5",
+      "message": "Angular 2 is not bad!",
+      "by": "Anonymous"
+    }
+  ]
+}
